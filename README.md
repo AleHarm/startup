@@ -5,4 +5,6 @@ My startup application will be the game of Dots and Dashes! Everyone loves to si
 ![IMG-4908](https://user-images.githubusercontent.com/101216320/215216429-1c468874-e378-426d-8852-fd0fb4eed05e.jpg)
 
 
-http://3.144.230.34
+http://3.130.167.210
+
+Use modifier 'Sudo' to access write protected files
