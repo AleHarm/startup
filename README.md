@@ -6,5 +6,6 @@ My startup application will be the game of Dots and Dashes! Everyone loves to si
 
 
 http://3.130.167.210
+https://cs260ah.click/
 
 Use modifier 'Sudo' to access write protected files
