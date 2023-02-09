@@ -9,3 +9,7 @@ http://3.130.167.210
 https://cs260ah.click/
 
 Use modifier 'Sudo' to access write protected files
+
+
+
+There were a lot of things I learned from the simon project. First of all, incredible (again) that such functionality comes from so little code, incredible that we have that capability. Additionally, I learned how simple it is to link pages together. Probably because that's what HTML is made to do, but hey, I still think it's cool. We see websites often as these abstract untouchable things that have no substance, when they're really just simple files hooked together in a simple way. Incredible.
