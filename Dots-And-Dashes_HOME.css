@@ -9,3 +9,17 @@
     display:flex;
     flex: 1;
 }
+
+#account-nav{
+
+    width: 100px;
+    display: flex;
+    float: right;
+    align-items: center;
+    justify-content: center;
+}
+
+#padding{
+
+    padding: 30px;
+}
