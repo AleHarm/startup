@@ -41,3 +41,17 @@
     display: flex;
     align-items: center;
 }
+
+#WL-Ratio-Wrap{
+    display:flex;
+    padding-left: 50px;
+}
+
+#Active-Games{
+    background-color: red;
+}
+
+#Active-Game-Row{
+    border-width: 3px;
+    border-color: black;
+}
