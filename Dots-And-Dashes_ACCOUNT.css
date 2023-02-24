@@ -8,18 +8,21 @@
     justify-content: center;
     display: flex;
     flex: 1;
+    width:30%;
+    margin:auto;
+    margin-top: 20px;
+    border-radius: 30px;
 }
 
 #play-btn{
-    background-color: aquamarine; 
-    border-color:#a006f9; 
-    color: #a006f9; 
+    background-color: #A5F7FA; 
+    border-color:#BAA1F0; 
+    color: #BAA1F0; 
     font-weight: 800;
 }
 
 #play-nav{
 
-    width: 100px;
     display: flex;
     float: right;
     align-items: center;
@@ -31,8 +34,8 @@
     padding: 50px;
 }
 
-#user-img{
-
+#play-img{
+    margin-top: 2px;
     float: left;
 }
 
@@ -47,11 +50,39 @@
     padding-left: 50px;
 }
 
+#Active-Games-Wrap{
+
+    width:400px;
+    padding-left: 50px;
+    padding-top: 20px;
+}
+
 #Active-Games{
-    background-color: red;
+    background-color: #A5F7FA;
+}
+
+#Timestamp, #Return-To-Game-Button{
+    padding:10px;
 }
 
 #Active-Game-Row{
-    border-width: 3px;
+    border-width: 1px;
     border-color: black;
+}
+
+@media (max-width: 400px){
+
+    #title-bg{
+        width: auto;
+    }
+
+    #padding{
+        padding:0px;
+    }
+
+    main{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
