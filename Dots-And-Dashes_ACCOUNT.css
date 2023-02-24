@@ -1,0 +1,43 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#title-bg{
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex: 1;
+}
+
+#play-btn{
+    background-color: aquamarine; 
+    border-color:#a006f9; 
+    color: #a006f9; 
+    font-weight: 800;
+}
+
+#play-nav{
+
+    width: 100px;
+    display: flex;
+    float: right;
+    align-items: center;
+    justify-content: center;
+}
+
+#padding{
+
+    padding: 50px;
+}
+
+#user-img{
+
+    float: left;
+}
+
+#account-btn{
+
+    display: flex;
+    align-items: center;
+}
