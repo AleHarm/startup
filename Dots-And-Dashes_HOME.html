@@ -36,13 +36,30 @@
                     </button>
                 </div>
             </div>
-            <section">
+            <div id="color-selector-wrap">
+                <h8 for="color-selector" id = "color-selector-label">Choose your color:</h8>
+                <select id="color-selector" name="varSelect">
+                    <option>Red</option>
+                    <option>Orange</option>
+                    <option>Yellow</option>
+                    <option>Green</option>
+                    <option>Blue</option>
+                    <option>Purple</option>
+                    <option>Black</option>
+                    <option>Pink</option>
+                </select>
+                <a style="height:20px"></a>
+                <h8 id="confirm-color-text">Confirm pick?</h8>
+                <button id = "confirm-color-choice">Confirm</button>
+                <a style="height:60px"></a>
+            </div>
+            <section>
                 <div id="playspace">
                     <table>
                     <tr id = row>
                         <td id = "click-area" style= "position: relative;">
-                            <svg id = "dot">
-                                <circle id = "dot-circle"/>
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -50,10 +67,13 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td>
+                        <td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -61,10 +81,12 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -72,10 +94,12 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -83,10 +107,12 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -94,10 +120,12 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -105,10 +133,12 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -116,10 +146,12 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -127,103 +159,8 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
-                            </svg>
-                            <svg id = "dash-vert" class = "dash">
-                                <rect id = "dash-vert-rect"/>
-                            </svg>
-                        </td>
-                    </tr>
-                    <tr id = row>
-                        <td id = "click-area" style= "position: relative;">
-                            <svg id = "dot">
-                                <circle id = "dot-circle"/>
-                            </svg>
-                            <svg id = "dash-hor" class = "dash">
-                                <rect id = "dash-hor-rect"/>
-                            </svg>
-                            <svg id = "dash-vert" class = "dash">
-                                <rect id = "dash-vert-rect"/>
-                            </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
-                            <svg id = "dot">
-                                <circle id = "dot-circle"/>
-                            </svg>
-                            <svg id = "dash-hor" class = "dash">
-                                <rect id = "dash-hor-rect"/>
-                            </svg>
-                            <svg id = "dash-vert" class = "dash">
-                                <rect id = "dash-vert-rect"/>
-                            </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
-                            <svg id = "dot">
-                                <circle id = "dot-circle"/>
-                            </svg>
-                            <svg id = "dash-hor" class = "dash">
-                                <rect id = "dash-hor-rect"/>
-                            </svg>
-                            <svg id = "dash-vert" class = "dash">
-                                <rect id = "dash-vert-rect"/>
-                            </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
-                            <svg id = "dot">
-                                <circle id = "dot-circle"/>
-                            </svg>
-                            <svg id = "dash-hor" class = "dash">
-                                <rect id = "dash-hor-rect"/>
-                            </svg>
-                            <svg id = "dash-vert" class = "dash">
-                                <rect id = "dash-vert-rect"/>
-                            </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
-                            <svg id = "dot">
-                                <circle id = "dot-circle"/>
-                            </svg>
-                            <svg id = "dash-hor" class = "dash">
-                                <rect id = "dash-hor-rect"/>
-                            </svg>
-                            <svg id = "dash-vert" class = "dash">
-                                <rect id = "dash-vert-rect"/>
-                            </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
-                            <svg id = "dot">
-                                <circle id = "dot-circle"/>
-                            </svg>
-                            <svg id = "dash-hor" class = "dash">
-                                <rect id = "dash-hor-rect"/>
-                            </svg>
-                            <svg id = "dash-vert" class = "dash">
-                                <rect id = "dash-vert-rect"/>
-                            </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
-                            <svg id = "dot">
-                                <circle id = "dot-circle"/>
-                            </svg>
-                            <svg id = "dash-hor" class = "dash">
-                                <rect id = "dash-hor-rect"/>
-                            </svg>
-                            <svg id = "dash-vert" class = "dash">
-                                <rect id = "dash-vert-rect"/>
-                            </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
-                            <svg id = "dot">
-                                <circle id = "dot-circle"/>
-                            </svg>
-                            <svg id = "dash-hor" class = "dash">
-                                <rect id = "dash-hor-rect"/>
-                            </svg>
-                            <svg id = "dash-vert" class = "dash">
-                                <rect id = "dash-vert-rect"/>
                             </svg>
                         </td>
                         <td id = "click-area" style= "position: relative;">
@@ -237,19 +174,22 @@
                     </tr>
                     <tr id = row>
                         <td id = "click-area" style= "position: relative;">
-                            <svg id = "dot">
-                                <circle id = "dot-circle"/>
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
                             </svg>
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
+                            </svg>
+                            <svg id = "dot">
+                                <circle id = "dot-circle"/>
                             </svg>
                         </td>
                         <td id = "click-area" style= "position: relative;">
-                            <svg id = "dot">
-                                <circle id = "dot-circle"/>
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -257,10 +197,12 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -268,10 +210,12 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -279,10 +223,12 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -290,10 +236,12 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -301,10 +249,12 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -312,16 +262,21 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
                             </svg>
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
+                            </svg>
+                            <svg id = "dot">
+                                <circle id = "dot-circle"/>
                             </svg>
                         </td>
                         <td id = "click-area" style= "position: relative;">
@@ -335,19 +290,22 @@
                     </tr>
                     <tr id = row>
                         <td id = "click-area" style= "position: relative;">
-                            <svg id = "dot">
-                                <circle id = "dot-circle"/>
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
                             </svg>
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
+                            </svg>
+                            <svg id = "dot">
+                                <circle id = "dot-circle"/>
                             </svg>
                         </td>
                         <td id = "click-area" style= "position: relative;">
-                            <svg id = "dot">
-                                <circle id = "dot-circle"/>
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -355,10 +313,12 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -366,10 +326,12 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -377,10 +339,12 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -388,10 +352,12 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -399,10 +365,12 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -410,16 +378,21 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
                             </svg>
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
+                            </svg>
+                            <svg id = "dot">
+                                <circle id = "dot-circle"/>
                             </svg>
                         </td>
                         <td id = "click-area" style= "position: relative;">
@@ -433,19 +406,22 @@
                     </tr>
                     <tr id = row>
                         <td id = "click-area" style= "position: relative;">
-                            <svg id = "dot">
-                                <circle id = "dot-circle"/>
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
                             </svg>
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
+                            </svg>
+                            <svg id = "dot">
+                                <circle id = "dot-circle"/>
                             </svg>
                         </td>
                         <td id = "click-area" style= "position: relative;">
-                            <svg id = "dot">
-                                <circle id = "dot-circle"/>
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -453,10 +429,12 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -464,10 +442,12 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -475,10 +455,12 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -486,10 +468,12 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -497,10 +481,12 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -508,16 +494,21 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
                             </svg>
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
+                            </svg>
+                            <svg id = "dot">
+                                <circle id = "dot-circle"/>
                             </svg>
                         </td>
                         <td id = "click-area" style= "position: relative;">
@@ -531,19 +522,22 @@
                     </tr>
                     <tr id = row>
                         <td id = "click-area" style= "position: relative;">
-                            <svg id = "dot">
-                                <circle id = "dot-circle"/>
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
                             </svg>
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
+                            </svg>
+                            <svg id = "dot">
+                                <circle id = "dot-circle"/>
                             </svg>
                         </td>
                         <td id = "click-area" style= "position: relative;">
-                            <svg id = "dot">
-                                <circle id = "dot-circle"/>
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -551,10 +545,12 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -562,10 +558,12 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -573,10 +571,12 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -584,10 +584,12 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -595,10 +597,12 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -606,16 +610,21 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
                             </svg>
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
+                            </svg>
+                            <svg id = "dot">
+                                <circle id = "dot-circle"/>
                             </svg>
                         </td>
                         <td id = "click-area" style= "position: relative;">
@@ -629,19 +638,22 @@
                     </tr>
                     <tr id = row>
                         <td id = "click-area" style= "position: relative;">
-                            <svg id = "dot">
-                                <circle id = "dot-circle"/>
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
                             </svg>
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
+                            </svg>
+                            <svg id = "dot">
+                                <circle id = "dot-circle"/>
                             </svg>
                         </td>
                         <td id = "click-area" style= "position: relative;">
-                            <svg id = "dot">
-                                <circle id = "dot-circle"/>
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -649,10 +661,12 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -660,10 +674,12 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -671,10 +687,12 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -682,10 +700,12 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -693,10 +713,12 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -704,16 +726,21 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
                             </svg>
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
+                            </svg>
+                            <svg id = "dot">
+                                <circle id = "dot-circle"/>
                             </svg>
                         </td>
                         <td id = "click-area" style= "position: relative;">
@@ -727,41 +754,138 @@
                     </tr>
                     <tr id = row>
                         <td id = "click-area" style= "position: relative;">
-                            <svg id = "dot">
-                                <circle id = "dot-circle"/>
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
                             </svg>
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
+                            </svg>
+                            <svg id = "dot">
+                                <circle id = "dot-circle"/>
+                            </svg>
+                        </td>
+                        <td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
+                            </svg>
+                            <svg id = "dash-hor" class = "dash">
+                                <rect id = "dash-hor-rect"/>
+                            </svg>
+                            <svg id = "dash-vert" class = "dash">
+                                <rect id = "dash-vert-rect"/>
+                            </svg>
+                            <svg id = "dot">
+                                <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
+                            </svg>
+                            <svg id = "dash-hor" class = "dash">
+                                <rect id = "dash-hor-rect"/>
+                            </svg>
+                            <svg id = "dash-vert" class = "dash">
+                                <rect id = "dash-vert-rect"/>
+                            </svg>
+                            <svg id = "dot">
+                                <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
+                            </svg>
+                            <svg id = "dash-hor" class = "dash">
+                                <rect id = "dash-hor-rect"/>
+                            </svg>
+                            <svg id = "dash-vert" class = "dash">
+                                <rect id = "dash-vert-rect"/>
+                            </svg>
+                            <svg id = "dot">
+                                <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
+                            </svg>
+                            <svg id = "dash-hor" class = "dash">
+                                <rect id = "dash-hor-rect"/>
+                            </svg>
+                            <svg id = "dash-vert" class = "dash">
+                                <rect id = "dash-vert-rect"/>
+                            </svg>
+                            <svg id = "dot">
+                                <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
+                            </svg>
+                            <svg id = "dash-hor" class = "dash">
+                                <rect id = "dash-hor-rect"/>
+                            </svg>
+                            <svg id = "dash-vert" class = "dash">
+                                <rect id = "dash-vert-rect"/>
+                            </svg>
+                            <svg id = "dot">
+                                <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
+                            </svg>
+                            <svg id = "dash-hor" class = "dash">
+                                <rect id = "dash-hor-rect"/>
+                            </svg>
+                            <svg id = "dash-vert" class = "dash">
+                                <rect id = "dash-vert-rect"/>
+                            </svg>
+                            <svg id = "dot">
+                                <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
+                            </svg>
+                            <svg id = "dash-hor" class = "dash">
+                                <rect id = "dash-hor-rect"/>
+                            </svg>
+                            <svg id = "dash-vert" class = "dash">
+                                <rect id = "dash-vert-rect"/>
+                            </svg>
+                            <svg id = "dot">
+                                <circle id = "dot-circle"/>
                             </svg>
                         </td>
                         <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
                             </svg>
-                            <svg id = "dash-hor" class = "dash">
-                                <rect id = "dash-hor-rect"/>
-                            </svg>
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
                         </td>
+                    </tr>
+                    <tr id = row>
                         <td id = "click-area" style= "position: relative;">
-                            <svg id = "dot">
-                                <circle id = "dot-circle"/>
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
                             </svg>
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
+                            </svg>
+                            <svg id = "dot">
+                                <circle id = "dot-circle"/>
                             </svg>
                         </td>
                         <td id = "click-area" style= "position: relative;">
-                            <svg id = "dot">
-                                <circle id = "dot-circle"/>
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -769,10 +893,12 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -780,10 +906,12 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -791,10 +919,12 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
@@ -802,16 +932,47 @@
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
                             </svg>
-                        </td>
-                        <td id = "click-area" style= "position: relative;">
                             <svg id = "dot">
                                 <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
                             </svg>
                             <svg id = "dash-hor" class = "dash">
                                 <rect id = "dash-hor-rect"/>
                             </svg>
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
+                            </svg>
+                            <svg id = "dot">
+                                <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
+                            </svg>
+                            <svg id = "dash-hor" class = "dash">
+                                <rect id = "dash-hor-rect"/>
+                            </svg>
+                            <svg id = "dash-vert" class = "dash">
+                                <rect id = "dash-vert-rect"/>
+                            </svg>
+                            <svg id = "dot">
+                                <circle id = "dot-circle"/>
+                            </svg>
+                        </td><td id = "click-area" style= "position: relative;">
+                            <svg id = "claim-square">
+                                <rect id = "claim-square-rect"/>
+                            </svg>
+                            <svg id = "dash-hor" class = "dash">
+                                <rect id = "dash-hor-rect"/>
+                            </svg>
+                            <svg id = "dash-vert" class = "dash">
+                                <rect id = "dash-vert-rect"/>
+                            </svg>
+                            <svg id = "dot">
+                                <circle id = "dot-circle"/>
                             </svg>
                         </td>
                         <td id = "click-area" style= "position: relative;">
@@ -898,6 +1059,7 @@
                 </div>
             </section>
         </main>
+        <footer></footer>
     </body>
 
 
