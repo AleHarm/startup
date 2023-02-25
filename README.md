@@ -16,3 +16,6 @@ There were a lot of things I learned from the simon project. First of all, incre
 
 
 From the Simon CSS activity I learned a cool thing about border-radius. I was curious how you go about getting those shapes made, and it turns out you can change the roundness of a button with CSS! Verry cool
+
+
+OH MY HOLY FREAKING CRAP, I THINK I LOVE THIS CLASS. I learned so much from the HTML CSS startup deliverable project, particularly a problem I dealt with and overcame often was how to center a div and it's contents on the page. I finally found margin: auto; and that was a lifsaver. So many more things, how to overlap elements by using aboslute and relative positioning, using hover, onclick and other operations, and how to use CSS effectively to affect multiple instances of an element rather than using style ="" for each. very tedious hour I spent before I got wise.
