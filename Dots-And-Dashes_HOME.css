@@ -1,0 +1,69 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#title-bg{
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex: 1;
+    width:30%;
+    margin:auto;
+    margin-top: 20px;
+    border-radius: 30px;
+}
+
+#Username-Password-Wrap{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:auto;
+    margin-top: 100px;
+    margin-bottom: 50px;    
+}
+
+#Username-Wrap, #Password-Wrap{
+    margin: auto;
+}
+
+#Password-Text, #Username-Text{
+    font-size: 30px;
+}
+
+#play-btn{
+    background-color: #A5F7FA; 
+    border-color:#BAA1F0; 
+    color: #BAA1F0; 
+    font-weight: 800;
+}
+
+#play-nav{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#play-img{
+    margin-top: 2px;
+    float: left;
+}
+
+
+@media (max-width: 400px){
+
+    #title-bg{
+        width: auto;
+    }
+
+    #padding{
+        padding:0px;
+    }
+
+    main{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

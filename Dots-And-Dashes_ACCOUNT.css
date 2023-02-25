@@ -39,22 +39,26 @@
     float: left;
 }
 
-#account-btn{
-
-    display: flex;
-    align-items: center;
-}
-
 #WL-Ratio-Wrap{
     display:flex;
-    padding-left: 50px;
+    margin: auto;
+    justify-content: center;   
+}
+
+#WL-Ratio-Label, #WL-Ratio{
+    font-size: 40px;
+}
+
+#WL-Ratio{
+    margin-top: 2px;    
 }
 
 #Active-Games-Wrap{
-
-    width:400px;
-    padding-left: 50px;
-    padding-top: 20px;
+    width:200px;
+    margin: auto;
+    margin-top: 40px;
+    display:flex;
+    justify-content: center;
 }
 
 #Active-Games{
@@ -63,6 +67,7 @@
 
 #Timestamp, #Return-To-Game-Button{
     padding:10px;
+    font-size: 36px;
 }
 
 #Active-Game-Row{

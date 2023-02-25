@@ -38,6 +38,10 @@
 
     display: flex;
     align-items: center;
+    background-color: #A5F7FA; 
+    border-color:#BAA1F0; 
+    color: #BAA1F0; 
+    font-weight: 800;
 }
 
 #color-selector-wrap{
