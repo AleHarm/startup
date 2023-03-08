@@ -11,7 +11,6 @@
       rel="stylesheet"
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"/>
-      <script src="play.js"></script>
         <!-- ADD FAVICON HERE 
             <link rel="icon" href="" />
         -->
@@ -78,8 +77,8 @@
                             <svg id = "claim-square">
                                 <rect id = "claim-square-rect"/>
                             </svg>
-                            <svg id = "dash-hor" class = "dash">
-                                <rect id = "dash-hor-rect" onclick="clickHandler(event)"/>
+                            <svg id = "dash-hor" class = "dash" onclick="clickHandler(event)">
+                                <rect id = "dash-hor-rect" />
                             </svg>
                             <svg id = "dash-vert" class = "dash">
                                 <rect id = "dash-vert-rect"/>
@@ -193,7 +192,9 @@
                 </div>
             </section>
         </main>
-        <footer></footer>
+        <footer>
+            <script src="play.js"></script>
+        </footer>
     </body>
 
 
