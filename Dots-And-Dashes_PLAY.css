@@ -61,7 +61,8 @@
     display: flex;
     z-index: -2;
     border-style:solid;
-    background-color: #EF9392;
+    border-width: 10px;
+    background-color: #A5F7FA;
 }
 
 #click-area{
@@ -138,7 +139,7 @@
 }
 
 .dash:hover{
-    background-color: #FADC9B !important;
+    background-color: darkslategrey !important;
 }
 
 footer{
