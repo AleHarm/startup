@@ -52,6 +52,32 @@
     flex-direction:column;
 }
 
+#scores{
+    width: 400px;
+    height: 150px;
+    margin: auto;
+    display: flex;
+}
+
+.score{
+    height: 110px;
+    width: 150px;
+    background-color: #A5F7FA;
+    border-style: solid;
+    border-color: #BAA1F0;
+    margin: auto;
+    text-align: center;
+}
+
+.score-text{
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.score-number{
+    font-weight: bold;
+}
+
 #playspace{
     align-items: center;
     justify-content: center;
@@ -144,6 +170,10 @@
 
 footer{
     height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
 }
 
 #SS-Alert{

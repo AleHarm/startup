@@ -2,13 +2,14 @@ var p1Turn = true;
 var playSpace = document.getElementById("playspace");
 const colorSelector1 = document.getElementById("color-selector1");
 const colorSelector2 = document.getElementById("color-selector2");
-document.querySelectorAll('.dash').forEach( x=> x.setAttribute("clicked", false))
+document.querySelectorAll('.dash').forEach( x=> x.setAttribute("clicked", false));
 var p1Color = colorSelector1.value;
 var p2Color = colorSelector2.value;
+var p1Score = 0;
+var p2Score = 0;
 playSpace.style.borderColor = "blue";
 
 colorSelector1.addEventListener("change", (event) => {
-    var oldColor = p1Color;
     var newColor = event.target.value
     p1Color = newColor;
     if(p1Turn){
@@ -17,14 +18,15 @@ colorSelector1.addEventListener("change", (event) => {
 });
 
 colorSelector2.addEventListener("change", (event) => {
-    var oldColor = p2Color;
-    var newColor = event.target.value
     p2Color = event.target.value;
     if(!p1Turn){
         playSpace.style.borderColor = p2Color;
     }
 });
 
+function resetBoard(){
+    location.reload();
+}
 
 function clickHandler(e) {
     tar = e.target;
@@ -41,19 +43,21 @@ function clickHandler(e) {
             tar.children[0].style.stroke = "black";
         }
 
-        if(tar.getAttribute("id") === "dash-vert"){
+        if(tar.getAttribute("id") == "dash-vert"){
 
             //RIGHT
             if(tar.parentElement.parentElement.nextElementSibling.children[index].querySelector("#dash-hor") || tar.parentElement.querySelector("#dash-hor") || tar.parentElement.nextElementSibling){
                 if(tar.parentElement.parentElement.nextElementSibling.children[index].querySelector("#dash-hor").children[0].style.fill && tar.parentElement.querySelector("#dash-hor").children[0].style.fill && tar.parentElement.nextElementSibling.querySelector("#dash-vert").children[0].style.fill){
                     if(p1Turn){
                         tar.parentElement.querySelector("#claim-square").children[0].style.fill = p1Color;
-                        //p1Score++;
+                        p1Score += 1;
                         point = true;
+                        document.getElementById("p1Score").innerHTML = p1Score;
                     }else{
                         tar.parentElement.querySelector("#claim-square").children[0].style.fill = p2Color;
-                        //p2SCore++;
+                        p2Score++;
                         point = true;
+                        document.getElementById("p2Score").innerHTML = p2Score;
                     }
                 }
             }
@@ -62,12 +66,14 @@ function clickHandler(e) {
                 if(tar.parentElement.parentElement.nextElementSibling.children[index - 1].querySelector("#dash-hor").children[0].style.fill && tar.parentElement.previousElementSibling.querySelector("#dash-hor").children[0].style.fill && tar.parentElement.previousElementSibling.querySelector("#dash-vert").children[0].style.fill){
                     if(p1Turn){
                         tar.parentElement.previousElementSibling.querySelector("#claim-square").children[0].style.fill = p1Color;
-                        //p1Score++;
+                        p1Score += 1;
                         point = true;
+                        document.getElementById("p1Score").innerHTML = p1Score;
                     }else{
                         tar.parentElement.previousElementSibling.querySelector("#claim-square").children[0].style.fill = p2Color;
-                        //p2SCore++;
+                        p2Score++;
                         point = true;
+                        document.getElementById("p2Score").innerHTML = p2Score;
                     }
                 }
             }
@@ -86,12 +92,14 @@ function clickHandler(e) {
                 if(tar.parentElement.querySelector("#dash-vert").children[0].style.fill && tar.parentElement.nextElementSibling.querySelector("#dash-vert").children[0].style.fill && tar.parentElement.parentElement.nextElementSibling.children[index].querySelector("#dash-hor").children[0].style.fill){
                     if(p1Turn){
                         tar.parentElement.querySelector("#claim-square").children[0].style.fill = p1Color;
-                        //p1Score++;
+                        p1Score += 1;
                         point = true;
+                        document.getElementById("p1Score").innerHTML = p1Score;
                     }else{
                         tar.parentElement.querySelector("#claim-square").children[0].style.fill = p2Color;
-                        //p2SCore++;
+                        p2Score += 1;
                         point = true;
+                        document.getElementById("p2Score").innerHTML = p2Score;
                     }
                 }
             }
@@ -100,12 +108,14 @@ function clickHandler(e) {
                 if(tar.parentElement.parentElement.previousElementSibling.children[index].querySelector("#dash-hor").children[0].style.fill && tar.parentElement.parentElement.previousElementSibling.children[index].querySelector("#dash-vert").children[0].style.fill && tar.parentElement.parentElement.previousElementSibling.children[index + 1].querySelector("#dash-vert").children[0].style.fill){
                     if(p1Turn){
                         tar.parentElement.parentElement.previousElementSibling.children[index].querySelector("#claim-square").children[0].style.fill = p1Color;
-                        //p1Score++;
+                        p1Score += 1;
                         point = true;
+                        document.getElementById("p1Score").innerHTML = p1Score;
                     }else{
                         tar.parentElement.parentElement.previousElementSibling.children[index].querySelector("#claim-square").children[0].style.fill = p2Color;
-                        //p2SCore++;
+                        p2Score += 1;
                         point = true;
+                        document.getElementById("p2Score").innerHTML = p2Score;
                     }
                 }
             }
@@ -120,6 +130,15 @@ function clickHandler(e) {
             }
         }
         
+        if((p1Score + p2Score) >= 2){
+            if(p1Score > p2Score){
+                window.alert(localStorage.getItem("Player") + " wins!!! \nPress \"Reset\" to play again!");
+            }else if( p1Score < p2Score){
+                window.alert("Player 2 wins!!! \nPress \"Reset\" to play again!");
+            }else{
+                window.alert("It's a tie!!! \nPress \"Reset\" to play again!");
+            }
+        }
     }
 }
 

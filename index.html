@@ -26,24 +26,26 @@
         </header>
 
         <main>
-            <div id = "Username-Password-Wrap">
-                <div id="Username-Wrap">
+            <div id = "Username-Wrap">
                     <label for="username" id="Username-Text">Username: </label>
                     <input id="Username" name="varUsername"/>
-                </div>
-                <div id="Password-Wrap">
-                    <label for="password" id="Password-Text">Password: </label>
-                    <input type="password" id="Password" name="varPassword"/>
-                </div>
             </div>
             <div id="play-nav">
-                <button type="button" id = "play-btn" class="btn btn-primary btn-lg" onclick="window.location.href='Dots-And-Dashes_PLAY.html'">
+                <button type="button" id = "play-btn" class="btn btn-primary btn-lg" onclick="goToPlay()">
                     <img id="play-img" src="https://cdn-icons-png.flaticon.com/512/0/375.png" width = "25" height = "25">
                     <span style = "margin-left: 10px">Play</span>
                 </button>
             </div>
         </main>
     </body>
-
-
+    <script>
+        function goToPlay(){
+            if(document.getElementById("Username").value){
+                localStorage.setItem("Player", document.getElementById("Username").value);
+            }else{
+                localStorage.setItem("Player", "Guest User");
+            }
+            window.location.href='Dots-And-Dashes_PLAY.html'
+        }
+    </script>
 </html>
