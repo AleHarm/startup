@@ -28,6 +28,7 @@ colorSelector2.addEventListener("change", (event) => {
 
 function clickHandler(e) {
     tar = e.target;
+    var point = false;
     
     if(tar.getAttribute("clicked")){
         tar.setAttribute("clicked", true);
@@ -41,24 +42,37 @@ function clickHandler(e) {
         }
 
         if(tar.getAttribute("id") === "dash-vert"){
-            if(tar.parentElement.parentElement.nextElementSibling.children[index].querySelector("#dash-hor").children[0].style.fill && tar.parentElement.querySelector("#dash-hor").children[0].style.fill && tar.parentElement.nextElementSibling.querySelector("#dash-vert").children[0].style.fill){
-                if(p1Turn){
-                    tar.parentElement.querySelector("#claim-square").children[0].style.fill = p1Color;
-                    //p1Score++;
-                }else{
-                    tar.parentElement.querySelector("#claim-square").children[0].style.fill = p2Color;
-                    //p2SCore++;
+
+            //RIGHT
+            if(tar.parentElement.parentElement.nextElementSibling.children[index].querySelector("#dash-hor") || tar.parentElement.querySelector("#dash-hor") || tar.parentElement.nextElementSibling){
+                if(tar.parentElement.parentElement.nextElementSibling.children[index].querySelector("#dash-hor").children[0].style.fill && tar.parentElement.querySelector("#dash-hor").children[0].style.fill && tar.parentElement.nextElementSibling.querySelector("#dash-vert").children[0].style.fill){
+                    if(p1Turn){
+                        tar.parentElement.querySelector("#claim-square").children[0].style.fill = p1Color;
+                        //p1Score++;
+                        point = true;
+                    }else{
+                        tar.parentElement.querySelector("#claim-square").children[0].style.fill = p2Color;
+                        //p2SCore++;
+                        point = true;
+                    }
                 }
             }
-            if(tar.parentElement.parentElement.nextElementSibling.children[index - 1].querySelector("#dash-hor").children[0].style.fill && tar.parentElement.previousElementSibling.querySelector("#dash-hor").children[0].style.fill && tar.parentElement.previousElementSibling.querySelector("#dash-vert").children[0].style.fill){
-                if(p1Turn){
-                    tar.parentElement.previousElementSibling.querySelector("#claim-square").children[0].style.fill = p1Color;
-                    //p1Score++;
-                }else{
-                    tar.parentElement.previousElementSibling.querySelector("#claim-square").children[0].style.fill = p1Color;
-                    //p2SCore++;
+            //LEFT
+            if(tar.parentElement.parentElement.nextElementSibling.children[index - 1] || tar.parentElement.previousElementSibling || tar.parentElement.previousElementSibling){
+                if(tar.parentElement.parentElement.nextElementSibling.children[index - 1].querySelector("#dash-hor").children[0].style.fill && tar.parentElement.previousElementSibling.querySelector("#dash-hor").children[0].style.fill && tar.parentElement.previousElementSibling.querySelector("#dash-vert").children[0].style.fill){
+                    if(p1Turn){
+                        tar.parentElement.previousElementSibling.querySelector("#claim-square").children[0].style.fill = p1Color;
+                        //p1Score++;
+                        point = true;
+                    }else{
+                        tar.parentElement.previousElementSibling.querySelector("#claim-square").children[0].style.fill = p2Color;
+                        //p2SCore++;
+                        point = true;
+                    }
                 }
-            }else{
+            }
+            //NO POINT
+            if(!point){
                 p1Turn = !p1Turn;
                 if(p1Turn){
                     document.getElementById("playspace").style.borderColor = p1Color;
@@ -67,24 +81,36 @@ function clickHandler(e) {
                 }
             }
         }else{
-            if(tar.parentElement.querySelector("#dash-vert").children[0].style.fill && tar.parentElement.nextElementSibling.querySelector("#dash-vert").children[0].style.fill && tar.parentElement.parentElement.nextElementSibling.children[index].querySelector("#dash-hor").children[0].style.fill){
-                if(p1Turn){
-                    tar.parentElement.querySelector("#claim-square").children[0].style.fill = p1Color;
-                    //p1Score++;
-                }else{
-                    tar.parentElement.querySelector("#claim-square").children[0].style.fill = p2Color;
-                    //p2SCore++;
+            //BELOW
+            if(tar.parentElement.querySelector("#dash-vert") || tar.parentElement.nextElementSibling.querySelector("#dash-vert") || tar.parentElement.parentElement.nextElementSibling){
+                if(tar.parentElement.querySelector("#dash-vert").children[0].style.fill && tar.parentElement.nextElementSibling.querySelector("#dash-vert").children[0].style.fill && tar.parentElement.parentElement.nextElementSibling.children[index].querySelector("#dash-hor").children[0].style.fill){
+                    if(p1Turn){
+                        tar.parentElement.querySelector("#claim-square").children[0].style.fill = p1Color;
+                        //p1Score++;
+                        point = true;
+                    }else{
+                        tar.parentElement.querySelector("#claim-square").children[0].style.fill = p2Color;
+                        //p2SCore++;
+                        point = true;
+                    }
                 }
             }
-            if(tar.parentElement.parentElement.nextElementSibling.children[index - 1].querySelector("#dash-hor").children[0].style.fill && tar.parentElement.previousElementSibling.querySelector("#dash-hor").children[0].style.fill && tar.parentElement.previousElementSibling.querySelector("#dash-vert").children[0].style.fill){
-                if(p1Turn){
-                    tar.parentElement.previousElementSibling.querySelector("#claim-square").children[0].style.fill = p1Color;
-                    //p1Score++;
-                }else{
-                    tar.parentElement.previousElementSibling.querySelector("#claim-square").children[0].style.fill = p1Color;
-                    //p2SCore++;
+            //ABOVE
+            if(tar.parentElement.parentElement.previousElementSibling && tar.parentElement.parentElement.previousElementSibling.children[index].querySelector("#dash-vert") && tar.parentElement.parentElement.previousElementSibling.children[index + 1].querySelector("#dash-vert")){
+                if(tar.parentElement.parentElement.previousElementSibling.children[index].querySelector("#dash-hor").children[0].style.fill && tar.parentElement.parentElement.previousElementSibling.children[index].querySelector("#dash-vert").children[0].style.fill && tar.parentElement.parentElement.previousElementSibling.children[index + 1].querySelector("#dash-vert").children[0].style.fill){
+                    if(p1Turn){
+                        tar.parentElement.parentElement.previousElementSibling.children[index].querySelector("#claim-square").children[0].style.fill = p1Color;
+                        //p1Score++;
+                        point = true;
+                    }else{
+                        tar.parentElement.parentElement.previousElementSibling.children[index].querySelector("#claim-square").children[0].style.fill = p2Color;
+                        //p2SCore++;
+                        point = true;
+                    }
                 }
-            }else{
+            }
+            //NO POINT
+            if(!point){
                 p1Turn = !p1Turn;
                 if(p1Turn){
                     document.getElementById("playspace").style.borderColor = p1Color;
