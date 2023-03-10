@@ -28,31 +28,34 @@ colorSelector2.addEventListener("change", (event) => {
 
 function clickHandler(e) {
     tar = e.target;
-
+    
     if(tar.getAttribute("clicked")){
         tar.setAttribute("clicked", true);
         if(p1Turn){
             tar.children[0].style.fill = p1Color;
+            tar.children[0].style.stroke = "black";
         }else{
             tar.children[0].style.fill = p2Color;
+            tar.children[0].style.stroke = "black";
         }
 
         if(tar.getAttribute("id") === "dash-vert"){
 
-            if(tar.previousElementSibling.children[0].style.fill){
+            if(tar.parentElement.querySelector("#dash-hor").children[0].style.fill && tar.parentElement.nextElementSibling.querySelector("#dash-vert").children[0].style.fill){
                 if(p1Turn){
-                    tar.previousElementSibling.previousElementSibling.children[0].style.fill = p1Color;
+                    tar.parentElement.querySelector("#claim-square").children[0].style.fill = p1Color;
                     //p1Score++;
                 }else{
-                    tar.previousElementSibling.previousElementSibling.children[0].style.fill = p2Color;
+                    tar.parentElement.querySelector("#claim-square").children[0].style.fill = p2Color;
                     //p2SCore++;
                 }
-            }else if(/*SQUARE SURROUNDED*/false/*<--PLACEHOLDER*/){
+            }
+            if(tar.parentElement.previousElementSibling.querySelector("#dash-hor").children[0].style.fill && tar.parentElement.previousElementSibling.querySelector("#dash-vert").children[0].style.fill){
                 if(p1Turn){
-                    tar.previousElementSibling.previousElementSibling.children[0].style.fill = p1Color;
+                    tar.parentElement.previousElementSibling.querySelector("#claim-square").children[0].style.fill = p1Color;
                     //p1Score++;
                 }else{
-                    tar.previousElementSibling.previousElementSibling.children[0].style.fill = p2Color;
+                    tar.parentElement.previousElementSibling.querySelector("#claim-square").children[0].style.fill = p1Color;
                     //p2SCore++;
                 }
             }else{
