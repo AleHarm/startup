@@ -21,3 +21,6 @@ From the Simon CSS activity I learned a cool thing about border-radius. I was cu
 OH MY HOLY FREAKING CRAP, I THINK I LOVE THIS CLASS. I learned so much from the HTML CSS startup deliverable project, particularly a problem I dealt with and overcame often was how to center a div and it's contents on the page. I finally found margin: auto; and that was a lifsaver. So many more things, how to overlap elements by using aboslute and relative positioning, using hover, onclick and other operations, and how to use CSS effectively to affect multiple instances of an element rather than using style ="" for each. very tedious hour I spent before I got wise.
 
 I'm soo excited to apply this next info to my website. Basically to store info, you just do it. You literally make up a variable name and pass the data. Crazy stuff
+
+
+Oh my gosh, there are mountains I learned from doing the start up javascript project. I learned how to access any element from any element, to use colors, switch statements, dynamically change info based on clicks, store info in a browser, the list is endless! Way cool
