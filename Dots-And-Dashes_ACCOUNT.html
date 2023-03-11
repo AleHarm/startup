@@ -37,38 +37,14 @@
 
             <div id="WL-Ratio-Wrap">
                 <p id="WL-Ratio-Label">W/L Ratio: </p>
-                <p id="WL-Ratio">5</p>
-            </div>
-            <div id="Active-Games-Wrap">
-                <table id="Active-Games">
-                    <tr id="Active-Game-Row">
-                        <td id="Timestamp">Timestamp</td>
-                        <td>
-                            <button id="Return-To-Game-Button">Go</button>
-                        </td>
-                    </tr>
-                    <tr id="Active-Game-Row">
-                        <td id="Timestamp">Timestamp</td>
-                        <td>
-                            <button id="Return-To-Game-Button">Go</button>
-                        </td>
-                    </tr>
-                    <tr id="Active-Game-Row">
-                        <td id="Timestamp">Timestamp</td>
-                        <td>
-                            <button id="Return-To-Game-Button">Go</button>
-                        </td>
-                    </tr>
-                    <tr id="Active-Game-Row">
-                        <td id="Timestamp">Timestamp</td>
-                        <td>
-                            <button id="Return-To-Game-Button">Go</button>
-                        </td>
-                    </tr>
-                </table>
+                <p id="WL-Ratio">Unavailable</p>
             </div>
         </main>
     </body>
+
+    <script>
+        document.getElementById("WL-Ratio").innerHTML = localStorage.getItem(localStorage.getItem("Player") + "WL");
+    </script>
 
 
 </html>

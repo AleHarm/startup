@@ -1,16 +1,77 @@
 var p1Turn = true;
+var firstClick = true;
 var playSpace = document.getElementById("playspace");
 const colorSelector1 = document.getElementById("color-selector1");
 const colorSelector2 = document.getElementById("color-selector2");
 document.querySelectorAll('.dash').forEach( x=> x.setAttribute("clicked", false));
-var p1Color = colorSelector1.value;
-var p2Color = colorSelector2.value;
+var p1Color = "#0014A8";
+var p2Color = "#CC9911";
 var p1Score = 0;
 var p2Score = 0;
-playSpace.style.borderColor = "blue";
+playSpace.style.borderColor = "#0014A8";
+
+if(localStorage.getItem("Player") == ""){
+
+    document.getElementById("color-selector-label1").innerHTML = "Guest User";
+    document.getElementById("score-text-1").innerHTML = "Guest User";
+}else{
+    document.getElementById("color-selector-label1").innerHTML = localStorage.getItem("Player");
+    document.getElementById("score-text-1").innerHTML = localStorage.getItem("Player");
+}
 
 colorSelector1.addEventListener("change", (event) => {
-    var newColor = event.target.value
+    const colorName = event.target.value;
+    const oldColor = p1Color;
+
+    switch(colorName){
+        case 'Zaffre':
+            var newColor = "#0014A8";
+            break;
+        case 'Australien':
+            var newColor = "#CC9911";
+            break;
+        case 'Drunk-Tank-Pink':
+            var newColor = "#FF91AF";
+            break;
+        case 'Falu':
+            var newColor = "#801818";
+            break;
+        case 'Drake’s-Neck-Green':
+            var newColor = "#08B07C";
+            break;
+        case 'Razzmatazz':
+            var newColor = "#E3256B";
+            break;
+        case 'Caput-Mortuum':
+            var newColor = "#592720";
+            break;
+        case 'Goose-Turd-Green':
+            var newColor = "#4EA809";
+            break;
+        case 'Lusty-Gallant':
+            var newColor = "#FD7F4F";
+            break;
+        case 'Glaucous':
+            var newColor = "#6082B6";
+            break;
+        case 'Milk-and-Water':
+            var newColor = "#F6F6FF";
+            break;
+        case 'Puke':
+            var newColor = "#947706";
+            break;
+        case 'Gingerline':
+            var newColor = "#FCCB4F";
+            break;
+    }
+    
+    for(var i = 0; i < document.getElementById("color-selector2").childElementCount; i += 1){
+
+        document.getElementById("color-selector2").children[i].style.display = "auto";
+    }
+
+    document.getElementById(colorName + "2").style.display = "none";
+
     p1Color = newColor;
     if(p1Turn){
         playSpace.style.borderColor = p1Color;
@@ -18,11 +79,67 @@ colorSelector1.addEventListener("change", (event) => {
 });
 
 colorSelector2.addEventListener("change", (event) => {
-    p2Color = event.target.value;
+    const colorName = event.target.value;
+
+    switch(colorName){
+        case 'Zaffre':
+            var newColor = "#0014A8";
+            break;
+        case 'Australien':
+            var newColor = "#CC9911";
+            break;
+        case 'Drunk-Tank-Pink':
+            var newColor = "#FF91AF";
+            break;
+        case 'Falu':
+            var newColor = "#801818";
+            break;
+        case 'Drake’s-Neck-Green':
+            var newColor = "#08B07C";
+            break;
+        case 'Razzmatazz':
+            var newColor = "#E3256B";
+            break;
+        case 'Caput-Mortuum':
+            var newColor = "#592720";
+            break;
+        case 'Goose-Turd-Green':
+            var newColor = "#4EA809";
+            break;
+        case 'Lusty-Gallant':
+            var newColor = "#FD7F4F";
+            break;
+        case 'Glaucous':
+            var newColor = "#6082B6";
+            break;
+        case 'Milk-and-Water':
+            var newColor = "#F6F6FF";
+            break;
+        case 'Puke':
+            var newColor = "#947706";
+            break;
+        case 'Gingerline':
+            var newColor = "#FCCB4F";
+            break;
+    }
+
+    for(var i = 0; i < document.getElementById("color-selector1").childElementCount; i += 1){
+
+        document.getElementById("color-selector1").children[i].style.display = "auto";
+    }
+
+    document.getElementById(colorName + "1").style.display = "none";
+
+    p2Color = newColor;
     if(!p1Turn){
         playSpace.style.borderColor = p2Color;
     }
 });
+
+function swapColorForScore(){
+    document.getElementById("color-selector-wrap-wrap").style.display = "none";
+    document.getElementById("scores").style.display = "flex";
+}
 
 function resetBoard(){
     location.reload();
@@ -31,6 +148,11 @@ function resetBoard(){
 function clickHandler(e) {
     tar = e.target;
     var point = false;
+
+    if(firstClick){
+        firstClick = false;
+        swapColorForScore();
+    }
     
     if(tar.getAttribute("clicked")){
         tar.setAttribute("clicked", true);
@@ -130,13 +252,44 @@ function clickHandler(e) {
             }
         }
         
-        if((p1Score + p2Score) >= 2){
-            if(p1Score > p2Score){
-                window.alert(localStorage.getItem("Player") + " wins!!! \nPress \"Reset\" to play again!");
-            }else if( p1Score < p2Score){
-                window.alert("Player 2 wins!!! \nPress \"Reset\" to play again!");
+        if((p1Score + p2Score) >= 9){
+            if(localStorage.getItem("Player") != ""){
+
+                if(localStorage.getItem(localStorage.getItem("Player") + "W") == null){
+                    localStorage.setItem(localStorage.getItem("Player") + "W", "0");
+                    localStorage.setItem(localStorage.getItem("Player") + "L", "0");
+                    localStorage.setItem(localStorage.getItem("Player") + "WL", "0");
+                }
+    
+                var playerW = parseInt(localStorage.getItem(localStorage.getItem("Player") + "W"));
+                var playerL = parseInt(localStorage.getItem(localStorage.getItem("Player") + "L"));
+               
+                if(p1Score > p2Score){
+
+                    playerW += 1;
+                    var playerWL = playerW / playerL;
+                    localStorage.setItem(localStorage.getItem("Player") + "WL", playerWL);
+                    localStorage.setItem(localStorage.getItem("Player") + "W", playerW);
+                    window.alert(localStorage.getItem("Player") + " wins!!! \nPress \"Reset Board\" at bottom of page to play again!");
+                    
+                }else if( p1Score < p2Score){
+                    
+                    playerL += 1;
+                    var playerWL = playerW / playerL;
+                    localStorage.setItem(localStorage.getItem("Player") + "WL", playerWL);
+                    localStorage.setItem(localStorage.getItem("Player") + "L", playerL);
+                    window.alert("Player 2 wins!!! \nPress \"Reset Board\" at bottom of page to play again!");
+                }else{
+                    window.alert("It's a tie!!! \nPress \"Reset Board\" at bottom of page to play again!");
+                }
             }else{
-                window.alert("It's a tie!!! \nPress \"Reset\" to play again!");
+                if(p1Score > p2Score){
+                    window.alert("Guest User wins!!! \nPress \"Reset Board\" at bottom of page to play again!");
+                }else if( p1Score < p2Score){
+                    window.alert("Player 2 wins!!! \nPress \"Reset Board\" at bottom of page to play again!");
+                }else{
+                    window.alert("It's a tie!!! \nPress \"Reset Board\" at bottom of page to play again!");
+                }
             }
         }
     }

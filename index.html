@@ -40,12 +40,8 @@
     </body>
     <script>
         function goToPlay(){
-            if(document.getElementById("Username").value){
-                localStorage.setItem("Player", document.getElementById("Username").value);
-            }else{
-                localStorage.setItem("Player", "Guest User");
-            }
-            window.location.href='Dots-And-Dashes_PLAY.html'
+            localStorage.setItem("Player", document.getElementById("Username").value);
+            window.location.href='Dots-And-Dashes_PLAY.html';
         }
     </script>
 </html>

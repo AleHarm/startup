@@ -52,11 +52,64 @@
     flex-direction:column;
 }
 
+#Zaffre1, #Zaffre2{
+    background-color: #0014A8;
+    color: white;
+}
+#Australien1, #Australien2{
+    background-color: #CC9911;
+    color: white;
+}
+#Drunk-Tank-Pink1, #Drunk-Tank-Pink2{
+    background-color: #FF91AF;
+    color: white;
+}
+#Falu1, #Falu2{
+    background-color: #801818;
+    color: white;
+}
+#Drake’s-Neck-Green1, #Drake’s-Neck-Green2{
+    background-color: #08B07C;
+    color: white;
+}
+#Razzmatazz1, #Razzmatazz2{
+    background-color: #E3256B;
+    color: white;
+}
+#Caput-Mortuum1, #Caput-Mortuum2{
+    background-color: #592720;
+    color: white;
+}
+#Goose-Turd-Green1, #Goose-Turd-Green2{
+    background-color: #4EA809;
+    color: white;
+}
+#Lusty-Gallant1, #Lusty-Gallant2{
+    background-color: #FD7F4F;
+    color: white;
+}
+#Glaucous1, #Glaucous2{
+    background-color: #6082B6;
+    color: white;
+}
+#Milk-and-Water1, #Milk-and-Water2{
+    background-color: #F6F6FF;
+    color: black;
+}
+#Puke1,#Puke2{
+    background-color: #947706;
+    color: white;
+}
+#Gingerline1, #Gingerline2{
+    background-color: #FCCB4F;
+    color: white;
+}
+
 #scores{
     width: 400px;
     height: 150px;
     margin: auto;
-    display: flex;
+    display: none;
 }
 
 .score{
