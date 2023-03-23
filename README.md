@@ -24,3 +24,6 @@ I'm soo excited to apply this next info to my website. Basically to store info, 
 
 
 Oh my gosh, there are mountains I learned from doing the start up javascript project. I learned how to access any element from any element, to use colors, switch statements, dynamically change info based on clicks, store info in a browser, the list is endless! Way cool
+
+
+I'm dead, I'm dying, I'm dead. so much knowledge. MongoDB seems really cool and I've heard a lot about it. TBH my brain is just not in the place to learn about this rn. But I learned where you have to put your info to have everything Mongo work right
