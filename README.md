@@ -27,3 +27,5 @@ Oh my gosh, there are mountains I learned from doing the start up javascript pro
 
 
 I'm dead, I'm dying, I'm dead. so much knowledge. MongoDB seems really cool and I've heard a lot about it. TBH my brain is just not in the place to learn about this rn. But I learned where you have to put your info to have everything Mongo work right
+
+Very cool stuff. I think I understand what's happening, and now I get how MongoDB ties in, at least a little bit. tough stuff. I also learned that your website won't change if you're updating and pushing the wrong files, and the deploying the files you already have for your website. Doesn't work like that. Don't assume that VS Code has the correct project open.
