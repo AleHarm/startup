@@ -32,11 +32,18 @@
     font-size: 30px;
 }
 
-#play-btn{
+#Login-btn, #Create-btn{
     background-color: #A5F7FA; 
     border-color:#BAA1F0; 
     color: #BAA1F0; 
     font-weight: 800;
+    font-size: 24px;
+    height: 50px;
+}
+
+#Login-btn{
+
+    margin-right: 10px;
 }
 
 #play-nav{
@@ -44,11 +51,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-#play-img{
-    margin-top: 2px;
-    float: left;
 }
 
 
