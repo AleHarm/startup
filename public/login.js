@@ -1,23 +1,3 @@
-(async () => {
-  let authenticated = false;
-  const userName = localStorage.getItem('Player');
-  if (userName) {
-    const nameEl = document.querySelector('#Username');
-    nameEl.value = userName;
-    const user = await getUser(nameEl.value);
-    authenticated = user?.authenticated;
-  }
-
-  if (authenticated) {
-    document.querySelector('#playerName').textContent = userName;
-    setDisplay('loginControls', 'none');
-    setDisplay('playControls', 'block');
-  } else {
-    setDisplay('loginControls', 'block');
-    setDisplay('playControls', 'none');
-  }
-})();
-
 async function loginUser() {
   loginOrCreate(`/api/auth/login`);
 }
@@ -42,10 +22,7 @@ async function loginOrCreate(endpoint) {
     localStorage.setItem('Player', userName);
     window.location.href = 'Dots-And-Dashes_PLAY.html';
   } else {
-    const modalEl = document.querySelector('#msgModal');
-    modalEl.querySelector('.modal-body').textContent = `⚠ Error: ${body.msg}`;
-    const msgModal = new bootstrap.Modal(modalEl, {});
-    msgModal.show();
+    console.log("Couldn't log in, need to create user");
   }
 }
 
