@@ -10,11 +10,11 @@ if (!userName) {
   throw Error('Database not configured. Set environment variables');
 }
 
-const url = `mongodb+srv://cs260:cs260@cluster0.kzyyzj6.mongodb.net/?retryWrites=true&w=majority`;
+const url = `mongodb+srv://alexharmon0427:startup@userinfo.ex9swz8.mongodb.net/?retryWrites=true&w=majority`;
 
 const client = new MongoClient(url);
-const userCollection = client.db('simon').collection('user');
-const scoreCollection = client.db('simon').collection('score');
+const userCollection = client.db('UserInfo').collection('user');
+const winrateCollection = client.db('UserInfo').collection('winrate');
 
 function getUser(email) {
   return userCollection.findOne({ email: email });
@@ -31,6 +31,7 @@ async function createUser(email, password) {
   const user = {
     email: email,
     password: passwordHash,
+    winrate: 0,
     token: uuid.v4(),
   };
   await userCollection.insertOne(user);
@@ -38,24 +39,23 @@ async function createUser(email, password) {
   return user;
 }
 
-function addScore(score) {
-  scoreCollection.insertOne(score);
+/*
+function updateWinrate(winrate) {
+  winrateCollection.insertOne(winrate);
 }
 
-function getHighScores() {
+function getWinRate(user) {
   const query = {};
-  const options = {
-    sort: { score: -1 },
-    limit: 10,
-  };
-  const cursor = scoreCollection.find(query, options);
-  return cursor.toArray();
+  const options = {};
+  const cursor = userCollection.find(user).winrate;
+  return cursor;
 }
+*/
 
 module.exports = {
   getUser,
   getUserByToken,
   createUser,
-  addScore,
-  getHighScores,
+  //updateWinrate,
+  //getWinRate,
 };
