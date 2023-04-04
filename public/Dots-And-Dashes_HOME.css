@@ -14,14 +14,14 @@
     border-radius: 30px;
 }
 
-#Username-Wrap{
+#Username-Wrap, #Password-Wrap{
     display:flex;
     justify-content: center;
     margin:auto;
 }
 
 
-#Username-Text, #Username{
+#Username-Text, #Username, #Password, #Password-Text{
     margin-top: 200px;
     margin-bottom: 50px;
     font-size: 30px;
