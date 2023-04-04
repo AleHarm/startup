@@ -1,9 +1,9 @@
-async function loginUser() {
-  loginOrCreate(`/api/auth/login`);
+function loginUser() {
+  
 }
 
-async function createUser() {
-  loginOrCreate(`/api/auth/create`);
+function createUser() {
+  oginOrCreate();
 }
 
 async function loginOrCreate(endpoint) {
