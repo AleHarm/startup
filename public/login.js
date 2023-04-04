@@ -1,8 +1,8 @@
 (async () => {
   let authenticated = false;
-  const userName = localStorage.getItem('userName');
+  const userName = localStorage.getItem('Player');
   if (userName) {
-    const nameEl = document.querySelector('#userName');
+    const nameEl = document.querySelector('#Username');
     nameEl.value = userName;
     const user = await getUser(nameEl.value);
     authenticated = user?.authenticated;
@@ -27,8 +27,8 @@ async function createUser() {
 }
 
 async function loginOrCreate(endpoint) {
-  const userName = document.querySelector('#userName')?.value;
-  const password = document.querySelector('#userPassword')?.value;
+  const userName = document.querySelector('#Username')?.value;
+  const password = document.querySelector('#Password')?.value;
   const response = await fetch(endpoint, {
     method: 'post',
     body: JSON.stringify({ email: userName, password: password }),
