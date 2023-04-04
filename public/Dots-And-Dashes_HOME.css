@@ -21,8 +21,13 @@
 }
 
 
-#Username-Text, #Username, #Password, #Password-Text{
+#Username-Text, #Username{
     margin-top: 200px;
+    margin-bottom: 50px;
+    font-size: 30px;
+}
+
+#Password, #Password-Text{
     margin-bottom: 50px;
     font-size: 30px;
 }
