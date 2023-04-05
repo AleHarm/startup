@@ -1,34 +1,34 @@
-(async () => {
-  let authenticated = false;
-  const userName = localStorage.getItem('Player');
-  if (userName) {
-    const nameEl = document.querySelector('#Username');
-    nameEl.value = userName;
-    const user = await getUser(nameEl.value);
-    authenticated = user?.authenticated;
-  }
-
-  if (authenticated) {
-    document.querySelector('#playerName').textContent = userName;
-    setDisplay('loginControls', 'none');
-    setDisplay('playControls', 'block');
-  } else {
-    setDisplay('loginControls', 'block');
-    setDisplay('playControls', 'none');
-  }
-})();
+const DB = require('./database.mjs');
 
 async function loginUser() {
-  loginOrCreate(`/api/auth/login`);
+  const userName = document.querySelector('#Username')?.value;
+  const password = document.querySelector('#Password')?.value;
+
+  const user = await DB.getUser(userName);
+
+  if(user){
+    if(await bcrypt.compare(password, user.password)){
+
+      console.log("Found the user!");
+    }
+  }
+
+  //play();
 }
 
 async function createUser() {
-  loginOrCreate(`/api/auth/create`);
-}
 
-async function loginOrCreate(endpoint) {
-  const userName = document.querySelector('#Username')?.value;
+  const email = document.querySelector('#Username')?.value;
   const password = document.querySelector('#Password')?.value;
+
+  const user = await DB.createUser(email, password);
+
+  console.log("Made a user!");
+  //play();
+}
+/*
+async function loginOrCreate(endpoint) {
+
   const response = await fetch(endpoint, {
     method: 'post',
     body: JSON.stringify({ email: userName, password: password }),
@@ -39,18 +39,16 @@ async function loginOrCreate(endpoint) {
   const body = await response.json();
 
   if (response?.status === 200) {
-    localStorage.setItem('userName', userName);
-    window.location.href = 'play.html';
+    localStorage.setItem('Player', userName);
+    window.location.href = 'Dots-And-Dashes_PLAY.html';
   } else {
-    const modalEl = document.querySelector('#msgModal');
-    modalEl.querySelector('.modal-body').textContent = `⚠ Error: ${body.msg}`;
-    const msgModal = new bootstrap.Modal(modalEl, {});
-    msgModal.show();
+    console.log("couldn't log in, you need to create an account");
   }
 }
+*/
 
 function play() {
-  window.location.href = 'play.html';
+  window.location.href = 'Dots-And-Dashes-PLAY.html';
 }
 
 function logout() {
