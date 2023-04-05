@@ -1,10 +1,58 @@
-const DB = require('./database.mjs');
+const { MongoClient } = require('mongodb');
+const bcrypt = require('bcrypt');
+const uuid = require('uuid');
+
+const userName = process.env.MONGOUSER;
+const password = process.env.MONGOPASSWORD;
+const hostname = process.env.MONGOHOSTNAME;
+
+if (!userName) {
+  throw Error('Database not configured. Set environment variables');
+}
+
+const url = `mongodb+srv://alexharmon0427:startup@userinfo.ex9swz8.mongodb.net/?retryWrites=true&w=majority`;
+
+const client = new MongoClient(url);
+const userCollection = client.db('UserInfo').collection('user');
+const winrateCollection = client.db('UserInfo').collection('winrate');
+
+function getUser(email) {
+  return userCollection.findOne({ email: email });
+}
+
+async function createUser(email, password) {
+  // Hash the password before we insert it into the database
+  const passwordHash = await bcrypt.hash(password, 10);
+
+  const user = {
+    email: email,
+    password: passwordHash,
+    winrate: 0,
+    token: uuid.v4(),
+  };
+  await userCollection.insertOne(user);
+
+  return user;
+}
+
+/*
+function updateWinrate(winrate) {
+  winrateCollection.insertOne(winrate);
+}
+
+function getWinRate(user) {
+  const query = {};
+  const options = {};
+  const cursor = userCollection.find(user).winrate;
+  return cursor;
+}
+*/
 
 async function loginUser() {
   const userName = document.querySelector('#Username')?.value;
   const password = document.querySelector('#Password')?.value;
 
-  const user = await DB.getUser(userName);
+  const user = await getUser(userName);
 
   if(user){
     if(await bcrypt.compare(password, user.password)){
@@ -21,7 +69,7 @@ async function createUser() {
   const email = document.querySelector('#Username')?.value;
   const password = document.querySelector('#Password')?.value;
 
-  const user = await DB.createUser(email, password);
+  const user = await createUser(email, password);
 
   console.log("Made a user!");
   //play();
