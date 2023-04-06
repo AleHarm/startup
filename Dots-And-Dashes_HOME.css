@@ -14,7 +14,7 @@
     border-radius: 30px;
 }
 
-#Username-Wrap, #Password-Wrap{
+#Username-Wrap{
     display:flex;
     justify-content: center;
     margin:auto;
@@ -27,23 +27,11 @@
     font-size: 30px;
 }
 
-#Password, #Password-Text{
-    margin-bottom: 50px;
-    font-size: 30px;
-}
-
-#Login-btn, #Create-btn{
+#play-btn{
     background-color: #A5F7FA; 
     border-color:#BAA1F0; 
     color: #BAA1F0; 
     font-weight: 800;
-    font-size: 24px;
-    height: 50px;
-}
-
-#Login-btn{
-
-    margin-right: 10px;
 }
 
 #play-nav{
@@ -51,6 +39,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#play-img{
+    margin-top: 2px;
+    float: left;
 }
 
 

@@ -25,20 +25,13 @@
 
         <main>
             <div id = "Username-Wrap">
-                    <label for="username" id="Username-Text">Email: </label>
-                    <input id="Username" placeholder = " your@email.com"/>
-            </div>
-            <div id="Password-Wrap">
-                <label for="password" id="Password-Text">Password: </label>
-                <input id="Password" placeholder=" password" />
+                    <label for="username" id="Username-Text">Username: </label>
+                    <input id="U    sername" name="varUsername"/>
             </div>
             <div id="play-nav">
-                <button type="button" class="btn btn-primary" id ="Login-btn" onclick="loginUser()">
-                    Login
-                </button>
-
-                <button type="button" class="btn btn-primary" id = "Create-btn" onclick="createUser()">
-                    Create
+                <button type="button" id = "play-btn" class="btn btn-primary btn-lg" onclick="goToPlay()">
+                    <img id="play-img" src="https://cdn-icons-png.flaticon.com/512/0/375.png" width = "25" height = "25">
+                    <span style = "margin-left: 10px">Play</span>
                 </button>
             </div>
         </main>
@@ -48,5 +41,10 @@
             </div>
         </footer>
     </body>
-    <script src="login.js"></script>
+    <script>
+        function goToPlay(){
+            localStorage.setItem("Player", document.getElementById("Username").value);
+            window.location.href='Dots-And-Dashes_PLAY.html';
+        }
+    </script>
 </html>
